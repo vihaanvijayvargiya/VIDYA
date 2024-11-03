@@ -1,0 +1,14 @@
+[Unit]
+Description=Processor Autostart
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/test/Downloads/CHARM_Final/processor.py
+Restart=always
+User=test
+WorkingDirectory=/home/test/Downloads/CHARM_Final/
+StandardOutput=inherit
+StandardError=inherit
+
+[Install]
+WantedBy=multi-user.target
